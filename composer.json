@@ -7,7 +7,12 @@
         "axleus",
         "laminas-validator"
     ],
-    "homepage": "https://github.com/axleus/axleus-validator/discussions",
+    "homepage": "https://github.com/axleus/axleus-validator",
+    "support": {
+        "issues": "https://github.com/axleus/axleus-validator/issues",
+        "forum": "https://github.com/orgs/axleus/discussions",
+        "chat": "https://discord.gg/9TxQ74EPsG"
+    },
     "authors": [
         {
             "name": "Joey Smith",
