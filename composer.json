@@ -7,10 +7,9 @@
         "axleus",
         "laminas-validator"
     ],
-    "homepage": "https://github.com/axleus/axleus-validator",
+    "homepage": "https://github.com/orgs/axleus/discussions",
     "support": {
         "issues": "https://github.com/axleus/axleus-validator/issues",
-        "forum": "https://github.com/orgs/axleus/discussions",
         "chat": "https://discord.gg/9TxQ74EPsG"
     },
     "authors": [
