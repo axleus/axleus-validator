@@ -1,0 +1,68 @@
+{
+    "name": "axleus/axleus-validator",
+    "description": "Provides Validators for axleus components",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "axleus",
+        "laminas-validator"
+    ],
+    "homepage": "https://github.com/axleus/axleus-validator/discussions",
+    "authors": [
+        {
+            "name": "Joey Smith",
+            "email": "jsmith@webinertia.net",
+            "homepage": "https://webinertia.net/"
+        }
+    ],
+    "suggest": {
+        "laminas/laminas-component-installer" : "^3.0, required for configuration injection"
+    },
+    "require": {
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "axleus/axleus-db": "dev-master",
+        "laminas/laminas-component-installer": "^3.2",
+        "laminas/laminas-validator": "^2.64.1"
+    },
+    "require-dev": {
+        "laminas/laminas-coding-standard": "^2.5",
+        "phpunit/phpunit": "^10.2",
+        "psalm/plugin-phpunit": "^0.18.4",
+        "roave/security-advisories": "dev-master",
+        "vimeo/psalm": "^5.14"
+    },
+    "extra": {
+        "laminas": {
+            "config-provider": "Axleus\\Validator\\ConfigProvider"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Axleus\\Validator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AxleusTest\\Validator\\": "test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@static-analysis",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "static-analysis": "psalm --shepherd --stats",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+    },
+    "config": {
+        "allow-plugins": {
+            "laminas/laminas-component-installer": true,
+            "composer/package-versions-deprecated": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
