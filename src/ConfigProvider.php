@@ -11,13 +11,13 @@ final class ConfigProvider implements ConfigProviderInterface
     public function __invoke(): array
     {
         return [
-            static::AXLEUS_KEY => [static::class => $this->getAxleusSettings()],
-            'dependencies'     => $this->getDependencyConfig(),
-            'validators'       => $this->getDependencyConfig(),
+            static::class  => $this->getAxleusConfig(),
+            'dependencies' => $this->getDependencyConfig(),
+            'validators'   => $this->getDependencyConfig(),
         ];
     }
 
-    public function getAxleusSettings(): array
+    public function getAxleusConfig(): array
     {
         return [
             PasswordRequirement::class => [
